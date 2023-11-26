@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, scif = 0, pcif = 1;
+    
+    cin >> a >> b;
+    
+    if(a % 2 == b % 2)
+    {
+        while(a > 0)
+        {
+            scif += a % 10;
+            a = a / 10;
+        }
+        
+        while(b > 0)
+        {
+            scif += b % 10;
+            b = b / 10;
+        }
+        
+        cout << scif;
+    }
+    else
+    {
+        while(a > 0)
+        {
+            pcif *= a % 10;
+            a = a / 10;
+        }
+        
+        while(b > 0)
+        {
+            pcif *= b % 10;
+            b = b / 10;
+        }
+        
+        cout << pcif;
+    }
+
+    return 0;
+}
